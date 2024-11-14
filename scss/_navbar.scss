@@ -1,0 +1,97 @@
+.navbar {
+  background-color: $background-color;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    grid-column: 2 / 3;
+  }
+
+  .menu {
+    grid-column: 4 / 7;
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .compra {
+    grid-column: 8 / 9;
+  }
+
+  .menu-hamburguesa {
+    display: none; 
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+
+    .compra {
+      display: none; 
+    }
+
+    .menu-hamburguesa {
+      display: block; 
+      grid-column: 6 / 7;
+    }
+  }
+}
+
+.menu-desplegable {
+  display: none; 
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: $background-color;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+  }
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &.show {
+    display: block; 
+  }
+}
+
+
+

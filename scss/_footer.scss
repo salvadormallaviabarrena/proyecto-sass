@@ -1,0 +1,78 @@
+.footer {
+  width: 100%;
+  background-color: $background-color;
+  margin-top: auto;
+
+  .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+
+    .box {
+      figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100px; 
+          height: auto;
+        }
+      }
+
+      h2 {
+        color: $text-color;
+        font-size: 20px;
+      }
+
+      p {
+        color: black;
+      }
+    }
+
+    .red-social a {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      color: $background-color;
+      background-color: $text-color;
+      text-align: center;
+      transition: all 300ms ease;
+      text-decoration: none;
+
+      &:hover {
+        color: rgb(4, 0, 255);
+      }
+    }
+  }
+
+  .grupo-2 {
+    background-color: $text-color;
+    padding: 15px 10px;
+    text-align: center;
+    color: $background-color;
+  }
+
+  @media screen and (max-width: 768px) {
+    .grupo-1 {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+      padding: 35px 0px;
+    }
+
+    .grupo-2 {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+}
+                                    
+
+
+
+

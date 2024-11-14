@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+  .menu-desplegable {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: $background-color;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .menu-desplegable ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-desplegable ul li {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .menu-desplegable ul li a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .menu-desplegable.show {
+    display: block;
+  }
+}
+
+
+
+
+
