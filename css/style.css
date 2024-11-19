@@ -5,7 +5,7 @@
 }
 
 .navbar {
-  background-color:#DCD7C7;
+  background-color: #DCD7C7;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
@@ -84,69 +84,10 @@
   display: block;
 }
 
-.todo {
-  height: 80vh;
-  background-image: url(../img/fondo.jpg);
-  background-size: cover;
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-}
-.todo .info {
-  grid-column: 7/10;
-  grid-row: 3/7;
-  color: #181818;
-}
-.todo h3, .todo h1 {
-  font-family: "Times New Roman", Times, serif;
-}
-.todo h3 {
-  font-size: 1.5em;
-}
-.todo h1 {
-  font-size: 5em;
-  color: rgb(10, 10, 32);
-}
-.todo p {
-  font-family: "Times New Roman", Times, serif;
-}
-.todo .boton {
-  font-size: 1em;
-  background: none;
-  color: #DCD7C7;
-  padding: 10px 20px;
-  border: 1px solid rgb(10, 10, 32);
-  border-radius: 30px;
-  margin-top: 10px;
-}
-.todo .boton:hover {
-  background-color: #181818;
-  color: #DCD7C7;
-}
-@media screen and (max-width: 768px) {
-  .todo {
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-  .todo .info {
-    grid-column: 1/-1;
-    text-align: center;
-    padding: 20px;
-  }
-  .todo h1 {
-    font-size: 2.5em;
-  }
-  .todo .boton {
-    font-size: 0.9em;
-    padding: 8px 16px;
-  }
-}
-
 .footer {
   width: 100%;
   background-color: #DCD7C7;
+  margin-top: auto;
 }
 .footer .grupo-1 {
   width: 100%;
@@ -163,8 +104,8 @@
   align-items: center;
 }
 .footer .grupo-1 .box figure img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: auto;
 }
 .footer .grupo-1 .box h2 {
   color: #181818;
@@ -203,6 +144,172 @@
     padding: 10px;
     font-size: 14px;
   }
+}
+
+@media (max-width: 768px) {
+  .menu-desplegable {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #DCD7C7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .menu-desplegable ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-desplegable ul li {
+    padding: 10px;
+    text-align: center;
+  }
+  .menu-desplegable ul li a {
+    color: #181818;
+    text-decoration: none;
+  }
+  .menu-desplegable ul li a:hover {
+    color: white;
+  }
+  .menu-desplegable.show {
+    display: block;
+  }
+}
+.todo {
+  min-height: 100vh;
+  height: 100%;
+  background-image: url(../img/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  margin: 0;
+}
+.todo .info {
+  color: #181818;
+  padding: 20px;
+  text-align: center;
+}
+.todo .info h1 {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #DCD7C7;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.todo .info p {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #DCD7C7;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.todo .info .boton {
+  font-size: 1em;
+  background: none;
+  color: black;
+  padding: 10px 20px;
+  border: 1px solid #DCD7C7;
+  border-radius: 30px;
+  margin-top: 15px;
+  background-color: #DCD7C7;
+}
+.todo .info .boton:hover {
+  background-color: #a89e7b;
+}
+.todo .info p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.2em;
+  margin-top: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.vinos-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.vinos-galeria .vino {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.vinos-galeria .vino figure {
+  margin: 0;
+}
+.vinos-galeria .vino figure img {
+  width: 50%;
+  height: 50%;
+  max-height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.vinos-galeria .vino figure figcaption {
+  font-weight: bold;
+  color: #181818;
+  margin: 10px 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.vinos-galeria .vino figure .boton-comprar {
+  background: rgb(10, 10, 32);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.vinos-galeria .vino figure .boton-comprar:hover {
+  background: black;
+}
+@media screen and (max-width: 768px) {
+  .vinos-galeria {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .vinos-galeria .vino {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info h1 {
+    font-size: 2em;
+  }
+}
+.preguntas-frecuentes {
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.p-f {
+  background-color: #DCD7C7;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.p-f h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.p-f p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
 }
 
 /*# sourceMappingURL=style.css.map */

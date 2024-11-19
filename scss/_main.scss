@@ -1,0 +1,151 @@
+.todo {
+  min-height: 100vh;
+  height: 100%;
+  background-image: url(../img/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  margin: 0;
+
+  .info {
+    color: $text-color;
+    padding: 20px;
+    text-align: center;
+
+    h1 {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #DCD7C7; 
+      border: 1px solid #ddd; 
+      border-radius: 8px; 
+      padding: 1.5rem; 
+      margin-bottom: 1.5rem; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+    p {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #DCD7C7; 
+      border: 1px solid #ddd;
+      border-radius: 8px; 
+      padding: 1.5rem; 
+      margin-bottom: 1.5rem; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+.boton{
+font-size: 1em;
+background: none;
+color: black;
+padding: 10px 20px;
+border: 1px solid #DCD7C7;
+border-radius: 30px;
+margin-top: 15px;
+background-color: #DCD7C7;
+}
+.boton:hover {
+background-color: #a89e7b;
+}
+
+
+    p {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.2em;
+      margin-top: 10px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// Sección de Vinos
+.vinos-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+  gap: 20px;
+  padding: 20px;
+
+  .vino {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    figure {
+      margin: 0;
+
+      img {
+        width: 50%;
+        height: 50%;
+        max-height: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      figcaption {
+        font-weight: bold;
+        color: $text-color;
+        margin: 10px 0;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      .boton-comprar {
+        background: $accent-color;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: darken($accent-color, 10%);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    .vino {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info h1 {
+    font-size: 2em;
+  }
+}
+
+.preguntas-frecuentes {
+  margin: 2rem auto;
+  max-width: 800px; 
+}
+
+.p-f {
+  background-color: #DCD7C7; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  padding: 1.5rem; 
+  margin-bottom: 1.5rem; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.p-f h3 {
+  margin-bottom: 0.5rem;
+  color: #333; 
+}
+
+.p-f p {
+  margin: 0; 
+  color: #555; 
+  line-height: 1.6; 
+}
+
+
+
+

@@ -1,9 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const menuIcon = document.getElementById('menu-icon');
-    const menuDesplegable = document.getElementById('menu-desplegable');
-  
-    menuIcon.addEventListener('click', () => {
-      menuDesplegable.classList.toggle('show'); // Muestra u oculta el menú desplegable
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  const menuIcon = document.getElementById("menu-icon");
+  const menu = document.querySelector(".menu");
+
+  menuIcon.addEventListener("click", () => {
+      menu.classList.toggle("show-menu");
   });
-  
+});
